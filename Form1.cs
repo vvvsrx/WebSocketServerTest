@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using SuperSocket.SocketBase;
 using SuperSocket.WebSocket;
 using Newtonsoft.Json;
+using SuperSocket.SocketBase.Config;
 
 namespace WebSocketNoticeServer
 {
@@ -31,7 +32,11 @@ namespace WebSocketNoticeServer
 
             wsServer = new WebSocketServer();
 
-            if (!wsServer.Setup(2017))
+            if (!wsServer.Setup(new ServerConfig {
+                Ip = "Any",
+                Port = 2017,
+                Mode = SocketMode.Tcp
+            }))
             {
                 MessageBox.Show("Failed to setup!");
                 Application.Exit();
@@ -71,9 +76,9 @@ namespace WebSocketNoticeServer
             this.btnStop.BackColor = Color.Red;
             this.btnStop.Enabled = false;
             this.btnStart.Enabled = true;
-            this.button1.Enabled = true;
-            this.button2.Enabled = true;
-            this.button3.Enabled = true;
+            this.button1.Enabled = false;
+            this.button2.Enabled = false;
+            this.button3.Enabled = false;
             wsServer.Stop();
         }
 
@@ -88,9 +93,9 @@ namespace WebSocketNoticeServer
             this.btnStop.BackColor =  Color.Green;
             this.btnStop.Enabled = true;
             this.btnStart.Enabled = false;
-            this.button1.Enabled = false;
-            this.button2.Enabled = false;
-            this.button3.Enabled = false;
+            this.button1.Enabled = true;
+            this.button2.Enabled = true;
+            this.button3.Enabled = true;
         }
     }
 
