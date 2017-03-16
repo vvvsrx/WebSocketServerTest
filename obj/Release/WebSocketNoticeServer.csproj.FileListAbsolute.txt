@@ -20,3 +20,4 @@ D:\Louis\MyGit\WebSocketNoticeServer\obj\Release\WebSocketNoticeServer.Propertie
 D:\Louis\MyGit\WebSocketNoticeServer\obj\Release\WebSocketNoticeServer.csproj.GenerateResource.Cache
 D:\Louis\MyGit\WebSocketNoticeServer\obj\Release\WebSocketNoticeServer.exe
 D:\Louis\MyGit\WebSocketNoticeServer\obj\Release\WebSocketNoticeServer.pdb
+D:\Louis\MyGit\WebSocketNoticeServer\obj\Release\WebSocketNoticeServer.csprojResolveAssemblyReference.cache

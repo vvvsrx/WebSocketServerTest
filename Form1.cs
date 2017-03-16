@@ -50,7 +50,7 @@ namespace WebSocketNoticeServer
         {
             foreach (var session in wsServer.GetAllSessions())
             {
-                session.Send(JsonConvert.SerializeObject(new MessageModel { Command = 2, Data = new { Text = "您有1个订单正在配送中" } }));
+                session.Send(JsonConvert.SerializeObject(new MessageModel { Command = 1, Data = new { Text = "您有1个订单正在配送中" } }));
             }
         }
 
@@ -66,7 +66,7 @@ namespace WebSocketNoticeServer
         {
             foreach (var session in wsServer.GetAllSessions())
             {
-                session.Send(JsonConvert.SerializeObject(new MessageModel { Command = 2, Data = new { Text = "订单已收货" } }));
+                session.Send(JsonConvert.SerializeObject(new MessageModel { Command = 3, Data = new { Text = "订单已收货" } }));
             }
         }
 
